@@ -1,0 +1,28 @@
+name: Docker Security Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  docker-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Install Tools
+      run: |
+        sudo apt update
+        sudo apt install docker.io -y
+        curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+        curl -sfL https://raw.githubusercontent.com/goodwithtech/dockle/main/install.sh | sh -s -- -b /usr/local/bin
+        wget -qO hadolint https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 && chmod +x hadolint && sudo mv hadolint /usr/local/bin
+
+    - name: Run Audit
+      run: |
+        chmod +x run_audit.sh
+        ./run_audit.sh nginx:latest

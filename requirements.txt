@@ -1,0 +1,3 @@
+# Python dependencies for optional enhancements
+jinja2
+reportlab
