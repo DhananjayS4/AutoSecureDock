@@ -39,18 +39,20 @@ The reports generated help developers and security teams **detect risks early** 
 
 git clone https://github.com/<your-username>/AutoSecureDock.git
 cd AutoSecureDock
+
 2️⃣ Make the script executable
-chmod +x run_audit.sh
+- chmod +x run_audit.sh
 
 3️⃣ Run the security audit
-./run_audit.sh nginx:latest
+- ./run_audit.sh nginx:latest
 
 4️⃣ View reports
-cd reports
-cat trivy_nginx_latest.txt
-cat dockle_nginx_latest.txt
-cat hadolint_nginx_latest.txt
-cat gitleaks_nginx_latest.txt
+
+- cd reports
+- cat trivy_nginx_latest.txt
+- cat dockle_nginx_latest.txt
+- cat hadolint_nginx_latest.txt
+- cat gitleaks_nginx_latest.txt
 
 🔮 Future Enhancements
 
