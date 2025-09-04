@@ -14,24 +14,6 @@ The reports generated help developers and security teams **detect risks early** 
 
 ---
 
-## 📂 Project Structure
-
-AutoSecureDock/
-│── .github/workflows/ # GitHub Actions CI/CD workflow for automated audits
-│── utils/ # Utility scripts (scanners)
-│ ├── trivy_scan.sh # Runs vulnerability scan using Trivy
-│ ├── dockle_scan.sh # Runs best-practices scan using Dockle
-│ ├── hadolint_check.sh # Dockerfile linting
-│ └── gitleaks_scan.sh # Secret scanning
-│── Dockerfile # Containerized environment setup
-│── README.md # Project documentation
-│── remediator.py # Auto-remediation script (basic fixes & suggestions)
-│── requirements.txt # Python dependencies
-│── run_audit.sh # Main script to run full security audit
-
-
----
-
 ## ⚡ Features
 
 - ✅ **Automated Multi-Tool Scanning** – Runs Trivy, Dockle, Hadolint, and Gitleaks in one command  
@@ -54,7 +36,7 @@ AutoSecureDock/
 ## 🚀 Usage
 
 1️⃣ Clone the repository  
-```bash
+
 git clone https://github.com/<your-username>/AutoSecureDock.git
 cd AutoSecureDock
 2️⃣ Make the script executable
