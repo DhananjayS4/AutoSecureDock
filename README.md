@@ -1,4 +1,4 @@
-🚀 AutoSecureDock – Security Audit for Docker Containers
+#🚀 AutoSecureDock – Security Audit for Docker Containers
 
 AutoSecureDock is an automated security auditing tool for Docker images.
 It integrates multiple open-source security tools (Trivy, Dockle, Hadolint, and Gitleaks) to provide a comprehensive vulnerability and compliance check on container images.
