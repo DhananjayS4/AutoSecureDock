@@ -47,7 +47,6 @@ cd AutoSecureDock
 - ./run_audit.sh nginx:latest
 
 4️⃣ View reports
-
 - cd reports
 - cat trivy_nginx_latest.txt
 - cat dockle_nginx_latest.txt
